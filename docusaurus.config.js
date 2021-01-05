@@ -1,10 +1,10 @@
 module.exports = {
-  title: 'Gosiak.Dev',
-  tagline: 'Pretty Decent Software Engineer',
+  title: 'Caleb Gosiak',
+  tagline: 'A Pretty Decent Software Engineer',
   url: 'https://gosiak.dev',
   baseUrl: '/',
   onBrokenLinks: 'throw',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/caleb.svg',
   organizationName: 'facebook', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
   themeConfig: {
@@ -12,7 +12,7 @@ module.exports = {
       title: 'Gosiak.Dev',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: 'img/caleb.svg',
       },
       items: [
         {

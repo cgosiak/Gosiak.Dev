@@ -6,50 +6,146 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
-const features = [
+const skills = [
   {
-    title: 'Easy to Use',
-    imageUrl: 'img/undraw_docusaurus_mountain.svg',
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
+    title: 'GCP',
+    imageUrl: 'img/gcp.svg',
+    skillLevel: 7
   },
   {
-    title: 'Focus on What Matters',
-    imageUrl: 'img/undraw_docusaurus_tree.svg',
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
+    title: 'Angular',
+    imageUrl: 'img/angular.svg',
+    skillLevel: 9
   },
   {
-    title: 'Powered by React',
-    imageUrl: 'img/undraw_docusaurus_react.svg',
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
+    title: 'Firebase',
+    imageUrl: 'img/firebase.svg',
+    skillLevel: 9
   },
+  {
+    title: 'Python',
+    imageUrl: 'img/python.svg',
+    skillLevel: 9
+  },
+  {
+    title: 'Typescript/Javascript',
+    imageUrl: 'img/typescript.svg',
+    skillLevel: 9
+  },
+  {
+    title: 'Node.js',
+    imageUrl: 'img/nodejs.svg',
+    skillLevel: 8
+  },
+  {
+    title: 'Apache Kafka',
+    imageUrl: 'img/kafka.svg',
+    skillLevel: 8
+  },
+  {
+    title: 'Elastic',
+    imageUrl: 'img/elastic.svg',
+    skillLevel: 7
+  },
+  {
+    title: 'Docker',
+    imageUrl: 'img/docker.svg',
+    skillLevel: 8
+  },
+  {
+    title: 'Flutter',
+    imageUrl: 'img/flutter.svg',
+    skillLevel: 6
+  },
+  {
+    title: 'Mobile',
+    imageUrl: 'img/mobile.svg',
+    skillLevel: 9
+  },
+  {
+    title: 'Go',
+    imageUrl: 'img/go.svg',
+    skillLevel: 5
+  },
+  {
+    title: 'Linux',
+    imageUrl: 'img/linux.svg',
+    skillLevel: 6
+  },
+  {
+    title: 'DevOps',
+    imageUrl: 'img/devops.svg',
+    skillLevel: 9
+  },
+  {
+    title: 'Microsoft Azure',
+    imageUrl: 'img/azure.svg',
+    skillLevel: 6
+  },
+  {
+    title: 'Kubernetes',
+    imageUrl: 'img/kubernetes.svg',
+    skillLevel: 7
+  },
+  {
+    title: 'C# & .NET Core',
+    imageUrl: 'img/dotnetcore.svg',
+    skillLevel: 7
+  },
+  {
+    title: 'NoSQL',
+    imageUrl: 'img/nosql.svg',
+    skillLevel: 7
+  }
 ];
 
-function Feature({imageUrl, title, description}) {
+const funSkills = [
+  {
+    title: 'Camping',
+    imageUrl: 'img/camping.svg',
+    skillLevel: 9
+  },
+  {
+    title: 'Parenting',
+    imageUrl: 'img/parenting.svg',
+    skillLevel: 10
+  },
+  {
+    title: 'Fishing',
+    imageUrl: 'img/fishing.svg',
+    skillLevel: 6
+  },
+  {
+    title: 'Basketball',
+    imageUrl: 'img/basketball.svg',
+    skillLevel: 7
+  },
+  {
+    title: 'Cooking',
+    imageUrl: 'img/cooking.svg',
+    skillLevel: 8
+  },
+  {
+    title: 'Running',
+    imageUrl: 'img/running.svg',
+    skillLevel: 2
+  }
+];
+
+function Skill({title, imageUrl, skillLevel}) {
   const imgUrl = useBaseUrl(imageUrl);
+  const skillScore = `${(skillLevel / 10) * 100}%`;
   return (
-    <div className={clsx('col col--4', styles.feature)}>
+    <div className={clsx('col col--4', styles.skill)}>
       {imgUrl && (
         <div className="text--center">
-          <img className={styles.featureImage} src={imgUrl} alt={title} />
+          <img className={styles.skillImage} src={imgUrl} alt={title} />
         </div>
       )}
       <h3>{title}</h3>
-      <p>{description}</p>
+      <div className={styles.skillContainer}>
+        <div style={{width: skillScore}} className={styles.skillScore}></div>
+      </div>
     </div>
   );
 }
@@ -78,12 +174,23 @@ function Home() {
         </div>
       </header>
       <main>
-        {features && features.length > 0 && (
+        {skills && skills.length > 0 && (
           <section className={styles.features}>
             <div className="container">
               <div className="row">
-                {features.map((props, idx) => (
-                  <Feature key={idx} {...props} />
+                {skills.sort((a, b) => (a.skillLevel > b.skillLevel) ? -1 : 1).map((props, idx) => (
+                  <Skill key={idx} {...props} />
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+        {funSkills && funSkills.length > 0 && (
+          <section className={styles.features}>
+            <div className="container">
+              <div className="row">
+                {funSkills.sort((a, b) => (a.skillLevel > b.skillLevel) ? -1 : 1).map((props, idx) => (
+                  <Skill key={idx} {...props} />
                 ))}
               </div>
             </div>

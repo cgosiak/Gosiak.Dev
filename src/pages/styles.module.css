@@ -31,7 +31,27 @@
   width: 100%;
 }
 
-.featureImage {
+.skill {
+  margin: 0 0 32px 0;
+}
+
+.skillContainer {
+  width: 100%; /* Full width */
+  background-color: #ddd; /* Grey background */
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.skillImage {
   height: 200px;
   width: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.skillScore {
+  text-align: right; /* Right-align text */
+  height: 24px;
+  color: white; /* White text color */
+  background-color: #2fc2a0;
 }
