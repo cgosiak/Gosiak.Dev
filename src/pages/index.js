@@ -10,7 +10,7 @@ const skills = [
   {
     title: 'GCP',
     imageUrl: 'img/gcp.svg',
-    skillLevel: 7
+    skillLevel: 8
   },
   {
     title: 'Angular',
@@ -85,7 +85,7 @@ const skills = [
   {
     title: 'Kubernetes',
     imageUrl: 'img/kubernetes.svg',
-    skillLevel: 7
+    skillLevel: 8
   },
   {
     title: 'C# & .NET Core',
@@ -96,6 +96,36 @@ const skills = [
     title: 'NoSQL',
     imageUrl: 'img/nosql.svg',
     skillLevel: 7
+  },
+  {
+    title: 'React',
+    imageUrl: 'img/react.svg',
+    skillLevel: 6
+  },
+  {
+    title: 'GitHub Actions',
+    imageUrl: 'img/github_actions.svg',
+    skillLevel: 8
+  },
+  {
+    title: 'Jenkins',
+    imageUrl: 'img/jenkins.svg',
+    skillLevel: 9
+  },
+  {
+    title: 'Progressive Web Apps',
+    imageUrl: 'img/pwa.svg',
+    skillLevel: 9
+  },
+  {
+    title: 'Terraform',
+    imageUrl: 'img/terraform.svg',
+    skillLevel: 7
+  },
+  {
+    title: 'Vault',
+    imageUrl: 'img/vault.svg',
+    skillLevel: 6
   }
 ];
 
