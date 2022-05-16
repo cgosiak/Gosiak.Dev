@@ -88,9 +88,9 @@ const skills = [
     skillLevel: 8
   },
   {
-    title: 'C# & .NET Core',
-    imageUrl: 'img/dotnetcore.svg',
-    skillLevel: 7
+    title: 'AWS',
+    imageUrl: 'img/aws.svg',
+    skillLevel: 8
   },
   {
     title: 'NoSQL',
@@ -105,12 +105,12 @@ const skills = [
   {
     title: 'GitHub Actions',
     imageUrl: 'img/github_actions.svg',
-    skillLevel: 8
+    skillLevel: 9
   },
   {
     title: 'Jenkins',
     imageUrl: 'img/jenkins.svg',
-    skillLevel: 9
+    skillLevel: 8
   },
   {
     title: 'Progressive Web Apps',
